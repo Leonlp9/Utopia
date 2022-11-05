@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+
+    .items div p{
+        font-family: 'Manrope', sans-serif;
+        font-size: 1rem;
+        cursor: pointer;
+        height: 5px;
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    button i{
+        transition: transform 0.5s;
+    }
+
+    button:hover i{
+        transform: rotate(-45deg);
+    }
+
+    .items{
+        display: flex;
+        justify-content: space-around;
+        font-weight: 500;
+        width: 26rem;
+    }
+
+    .fa-bars{
+        opacity: 0;
+        font-size: 0;
+    }
+
+    .rightItems{
+        width: 12rem;
+        transition: width 0.5s;
+     }
+
+    .fa-solid{
+        transition: padding 0.5s, font-size 0.5s;
+        padding: 5px;
+    }
+
+    .fa-regular{
+        transition: padding 0.5s, font-size 0.5s;
+        padding: 5px;
+    }
+
+    @media only screen and (max-width: 792px) {
+        .items {
+            display: none;
+        }
+        .fa-bars{
+            opacity: 1;
+        }
+        .fa-solid{
+            font-size: 1.1rem;
+            padding: 10px;
+        }
+        .fa-regular{
+            font-size: 1.1rem;
+            padding: 10px;
+        }
+        .rightItems{
+            width: 16rem;
+        }
+    }
+
+    .top{
+        position: fixed;
+        background-color: #1a1a1a;
+        color: white;
+        bottom: 1rem;
+        right: 1rem;
+        border-radius: 100%;
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        z-index: 5000;
+        display: none;
+    }
+
+    .top.visible{
+        display: block;
+    }
+
+</style>
+
+<section id="top" class="top"><i class="fa-solid fa-up"></i></section>
+
+<section id="search" class="hidden search"></section>
+
+<section id="menu" class="search hidden">
+
+    <div>
+        <button onclick="toggleMenu()" style="float: right;" class="button"><i class="fa-solid fa-close"></i></button>
+
+        <div class="itemsMobile">
+            <div><p>Home</p></div>
+            <div><p>Regeln</p></div>
+            <div><p>Discord Chat</p></div>
+            <div><p>Vote</p></div>
+            <div><p>Shop</p></div>
+            <div><p>About</p></div>
+        </div>
+    </div>
+
+</section>
+
+<body style=" border-bottom: 1px solid #343434">
+    <div class="headerBase">
+        <div style="display: flex; margin: 5px 10px; justify-content: space-between; width: 100%; ">
+        <div  style="width: 12rem; position: sticky; top: 0; z-index: 1001">
+            <img src="assets/img/logo.png" style="margin-top: 2px; " height="50" width="50" alt="">
+        </div>
+        <div class="items">
+            <div><p>Home</p></div>
+            <div><p>Regeln</p></div>
+            <div><p>Discord Chat</p></div>
+            <div><p>Vote</p></div>
+            <div><p>Shop</p></div>
+            <div><p>About</p></div>
+        </div>
+        <div class="rightItems" style="display: flex; align-items: center; justify-content: space-evenly;">
+            <i onclick="switchTheme()" style="transition: all 250ms" id="sun" class="fa-solid fa-sun"></i>
+            <i onclick="toggleSearch()" class="fa-solid fa-magnifying-glass"></i>
+            <i onclick="toggleMenu()" class="fa-solid fa-bars"></i>
+            <button onclick="window.open('minecraft://addServer?type=server&ip=utopiamc.de&port=19132&name=§c§lUtopiaMc.de', '_blank')" class="playNow" style="margin-left: 5px">Play Now <i class="fa-solid fa-arrow-right" style="padding: 0; font-size: 1rem;"></i></button>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
