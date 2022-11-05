@@ -359,3 +359,15 @@ a:hover{
     background-position: center;
     background-size: cover;
 }
+
+.buttonSocial{
+    background: var(--borderColor);
+    color: var(--sub-color);
+    padding: 5px 15px;
+    border-radius: 1px;
+    border: none;
+    margin: 2px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 250ms ease-in-out;
+}
