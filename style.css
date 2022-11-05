@@ -16,6 +16,9 @@
 
     --select: #282828;
     --selectH2: #4b4b4b;
+
+    --brightness: 150%;
+    --brightness2: 150%;
 }
 
 [data-theme="light"] {
@@ -36,6 +39,9 @@
 
     --select: #e1e1e1;
     --selectH2: #ccc;
+
+    --brightness: 250%;
+    --brightness2: 180%;
 }
 
 
@@ -125,6 +131,14 @@ button:focus {
     transition: color 250ms ease-in-out;
 }
 
+.conte{
+    color: var(--color);
+    margin-top: 30px;
+    font-family: 'Manrope', sans-serif;
+    max-width: 700px;
+    transition: color 250ms ease-in-out;
+}
+
 a{
     text-decoration: none;
     color: var(--link);
@@ -162,6 +176,16 @@ a:hover{
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: color 250ms ease-in-out, background 250ms ease-in-out;
+}
+
+.cap{
+    color: var(--sub-color);
+    font-size: 2.3rem;
+    font-weight: 700;
+    background: var(--sub-background);
+    text-align: center;
+    padding: 36px;
     transition: color 250ms ease-in-out, background 250ms ease-in-out;
 }
 
@@ -270,4 +294,37 @@ a:hover{
     opacity: 1;
     transform: scale(1.0);
     bottom: 1.1rem;
+}
+
+.img{
+    transition: filter 250ms ease-in-out;
+    filter: brightness(var(--brightness));
+    border-radius: 5px;
+}
+
+.img2{
+    transition: filter 250ms ease-in-out;
+    filter: brightness(var(--brightness2));
+    border-radius: 5px;
+}
+
+.vote{
+    background: #3ebbbb;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    color: #0f0f0f;
+    margin: 2px;
+    font-size: 1.2rem;
+    transition: all 250ms ease-in-out;
+}
+
+.vote:hover{
+    background: #3ebbbb;
+    border-radius: 10px;
+    color: #0f0f0f;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-right: solid #2b9393 20px;
+    border-left: solid #2b9393 20px;
 }

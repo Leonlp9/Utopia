@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server Regeln | Discord Rules</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <script src="https://kit.fontawesome.com/8482ce4752.js" crossorigin="anonymous"></script>
+    <script src="globalScript.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+
+        h1{
+            font-weight: 700;
+            font-family: 'Manrope', sans-serif;
+            font-size: 2.2rem;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        h2{
+            font-weight: 700;
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.8rem;
+
+            padding-top: 5.5em;
+            margin: -4em 0 15px;
+
+        }
+    </style>
+</head>
+
+<header id="header"></header>
+<header class="cap" style="display: flex; justify-content: center; align-items: center;">
+    <div style="width: 30%; padding: 40px; font-family: 'Manrope',Tahoma,Arial,sans-serif; max-width: 500px; margin-bottom: 50px">
+        <h1>Vote für UtopiaMC</h1>
+        Stimme für UtopiaMC ab und erhalte jeden Tag Minecraft-Belohnungen. Gehen Sie zu jeder Abstimmungsseite nach unten.
+    </div>
+    <div class="img2" style="background: url('assets/img/backgrounds/cb-elementes-chest.png'); background-position: center; background-size: cover; width: 70%; max-width: 800px; height: 500px;">
+
+    </div>
+</header>
+
+<body  style="overflow-x: hidden">
+
+    <section class="container conte">
+
+        Lassen Sie sich jeden Tag in nur wenigen Sekunden belohnen. Geben Sie Ihren Minecraft-Namen auf jeder Website unten ein.
+        <br>
+        <br>
+        <button onclick="window.open('https://minecraft-server.eu/vote/index/21EAC?lang=de', '_blank')" class="button vote">Vote Seite 1</button>
+        <button onclick="window.open('https://minecraft-server.eu/vote/index/21EAC?lang=de', '_blank')" class="button vote">Vote Seite 2</button>
+        <button onclick="window.open('https://minecraft-server.eu/vote/index/21EAC?lang=de', '_blank')" class="button vote">Vote Seite 3</button>
+        <button onclick="window.open('https://minecraft-server.eu/vote/index/21EAC?lang=de', '_blank')" class="button vote">Vote Seite 4</button>
+        <button onclick="window.open('https://minecraft-server.eu/vote/index/21EAC?lang=de', '_blank')" class="button vote">Vote Seite 5</button>
+
+        <h2>Wie man abstimmt</h2>
+        <ol>
+            <li>Öffnen Sie eine Abstimmungsseite, indem Sie oben auf die grünen Schaltflächen klicken</li>
+            <li>Klicken Sie auf das Kästchen „Ich bin kein Roboter“ und absolvieren Sie bei Bedarf ein kurzes Quiz</li>
+            <li>Geben Sie Ihren Minecraft-Namen ein</li>
+            <li>Stimme abgeben!</li>
+            <li>Warten Sie 24 Stunden und Sie können es noch einmal tun!</li>
+        </ol>
+
+        <h2>Belohnungen abstimmen</h2>
+        Die Belohnungen variieren je nach Server, normalerweise erhalten Sie jedoch auf jeder Seite einen Vote Crate Key. Sie können es einlösen, um die Kiste für eine Belohnung zu öffnen!
+
+        <h2>Beispiele für Preise</h2>
+        Geld, XP, Verzauberungsbücher, UtopiaCoins und vieles mehr.
+
+        <h2>Spiele jetzt Minecraft</h2>
+        Sie schauen nur? Spiele jetzt den Minecraft-Server UtopiaMC! Sie können sogar abstimmen und von den Abstimmungsbelohnungen profitieren, wenn Sie beitreten. Wir bieten Spielmodi wie CityBuild, Oneblock, Challanges und vieles mehr.
+
+    </section>
+
+</body>
+
+<footer id="footer"></footer>
+
+<script>
+    function loadXMLDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("header").innerHTML =
+                    this.responseText;
+            }
+        };
+        xhttp.open("GET", "header.html", true);
+        xhttp.send();
+
+        loadXMLDoc2();
+        loadXMLDoc3();
+    }
+
+    function loadXMLDoc2() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("footer").innerHTML =
+                    this.responseText;
+            }
+        };
+        xhttp.open("GET", "footer.html", true);
+        xhttp.send();
+
+    }
+
+    function loadXMLDoc3() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("search").innerHTML =
+                    this.responseText;
+            }
+        };
+        xhttp.open("GET", "search.html", true);
+        xhttp.send();
+    }
+
+    window.onload = loadXMLDoc;
+</script>
+</html>
