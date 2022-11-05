@@ -58,7 +58,7 @@ document.onkeyup = function(e) {
 
 
 if (getCookie("mode") == "light"){
-    bool = true;
+    bool = false;
     document.documentElement.setAttribute('data-theme', 'light');
 }
 

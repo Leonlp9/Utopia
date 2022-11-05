@@ -75,27 +75,14 @@
         }
     }
 
-    .top{
-        position: fixed;
-        background-color: #1a1a1a;
-        color: white;
-        bottom: 1rem;
-        right: 1rem;
-        border-radius: 100%;
-        cursor: pointer;
-        height: 50px;
-        width: 50px;
-        z-index: 5000;
-        display: none;
-    }
-
-    .top.visible{
-        display: block;
-    }
-
 </style>
 
-<section id="top" class="top"><i class="fa-solid fa-up"></i></section>
+<section onclick="
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+" id="top" class="top">
+    <i class="fa-solid fa-up-long"></i>
+</section>
 
 <section id="search" class="hidden search"></section>
 
