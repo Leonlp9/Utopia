@@ -309,7 +309,7 @@ a:hover{
 }
 
 .vote{
-    background: #3ebbbb;
+    background: var(--button);
     width: 100%;
     padding: 10px;
     border-radius: 10px;
@@ -320,11 +320,11 @@ a:hover{
 }
 
 .vote:hover{
-    background: #3ebbbb;
+    background: var(--button);
     border-radius: 10px;
     color: #0f0f0f;
     font-size: 1.2rem;
     text-decoration: none;
-    border-right: solid #2b9393 20px;
-    border-left: solid #2b9393 20px;
+    border-right: solid #2a9d9d 20px;
+    border-left: solid #2a9d9d 20px;
 }
